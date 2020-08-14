@@ -1,7 +1,7 @@
 
 /// main parameters
 hsp_max = 10
-vsp_max = 10
+vsp_max = 15
 acc = 1.1
 grav = 0.8
 jump_sp = -18

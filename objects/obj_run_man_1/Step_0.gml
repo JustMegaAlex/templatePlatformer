@@ -31,7 +31,7 @@ if key_jump {
 	
 	var jumps_available = sign(jumps)
 	
-	vsp += jumps_available * jump_sp
+	vsp = jumps_available * jump_sp
 	
 	jumps -= jumps_available
 }

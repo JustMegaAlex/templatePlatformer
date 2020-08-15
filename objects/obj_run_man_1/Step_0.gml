@@ -22,10 +22,18 @@ vsp = scr_approach(vsp, vsp_max, grav)
 // reset on_wall
 on_wall = false
 
+// used to fake ground for smoother jumping
+on_ground--
+
+if !down_free
+
+	on_ground = on_ground_delay
+
 // on wall
 if ((!right_free and key_right) or (!left_free and key_left)) and abs(input_move_h)
 	
 	on_wall = true
+	
 
 // handle vertical sp
 // hit ceil
@@ -69,7 +77,7 @@ if jump_pressed {
 	
 		vsp = jump_sp
 	
-		jumps -= down_free
+		jumps -= down_free and !on_ground
 		
 		jump_pressed = 0
 	}

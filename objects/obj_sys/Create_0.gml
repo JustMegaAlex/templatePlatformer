@@ -1,4 +1,6 @@
 
+scr_debug_INI()
+
 mouse_pressed = false
 
 draw_set_valign(fa_middle)

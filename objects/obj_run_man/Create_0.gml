@@ -14,6 +14,4 @@ move_h = 0
 rm_sp_min = 5
 rm_sp_max = 60
 
-scr_debug_INI()
-
 draw_set_color(c_black)

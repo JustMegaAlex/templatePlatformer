@@ -44,12 +44,21 @@ else if !down_free {
 		vsp = 0
 }
 
-if key_jump {
+// jumping
+if key_jump
+
+	jump_pressed = jump_press_delay
+
+if jump_pressed {
+	
+	jump_pressed--
 	
 	// wall jump
 	if on_wall {
 		
 		jumps = jumps_max
+		
+		jump_pressed = 0
 		
 		vsp = jump_sp
 		
@@ -61,9 +70,9 @@ if key_jump {
 		vsp = jump_sp
 	
 		jumps -= down_free
+		
+		jump_pressed = 0
 	}
-	
-
 }
 
 // block hor sp if wall contact
